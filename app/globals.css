@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: radial-gradient(
+      circle at top,
+      rgba(124, 58, 237, 0.2),
+      transparent 60%
+    ),
+    #030712;
+  min-height: 100vh;
+}
+
+.glass {
+  backdrop-filter: blur(24px);
+  background: rgba(17, 24, 39, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.glimmer {
+  position: relative;
+}
+
+.glimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(248, 250, 252, 0.125),
+    rgba(79, 70, 229, 0.05) 50%,
+    transparent 70%
+  );
+  opacity: 0.7;
+  pointer-events: none;
+}
